@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import DrumDisplay from './DrumContainer';
 import MySlider from './Slider.js';
@@ -28,16 +27,23 @@ class App extends Component {
     sound.play();
   }
 
-  onKeyPress = (event) => {
+  onKeyPress = (event, name) => {
+    this.setState({ buttonClicked: event });
+    this.setState({ name: name });
+
+    document.getElementById(event);
+
     const sound = document.getElementById(event);
     sound.play();
-    alert(event + ' key pressed');
   }
 
   render() {
-    //console.log(this.state.buttonClicked);
     return (
-      <DrumDisplay buttonClicked={this.state.buttonClicked} name={this.state.name} handleClick={this.handleClick} onKeyPress={this.onKeyPress} />
+      <DrumDisplay
+        buttonClicked={this.state.buttonClicked}
+        name={this.state.name} handleClick={this.handleClick}
+        onKeyPress={this.onKeyPress}
+      />
     );
   }
 }
