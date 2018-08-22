@@ -1,58 +1,75 @@
 body {
   background-color: #89C4F4; }
 
-#drum-machine {
-  height: auto;
-  width: 40%;
-  background-color: #013243;
-  margin: auto;
-  color: snow; }
-  #drum-machine h1 {
+@media only screen and (min-width: 300px) {
+  #drum-machine {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    background-color: #013243;
+    margin: auto;
+    color: snow; }
+  h1 {
     text-align: center;
     color: snow;
     padding: .5em; }
-
-#display {
-  background-color: #013243;
-  height: 10em;
-  width: 100%; }
-  #display h3 {
+  #display {
+    background-color: #013243;
+    height: 10em;
+    width: 100%; }
+    #display h3 {
+      text-align: center; }
+  .drum-pad-container {
+    width: 100%;
+    height: auto;
+    margin: auto;
     text-align: center; }
-
-.drum-pad-container {
-  width: 100%;
-  height: auto;
-  margin: auto;
-  text-align: center; }
-
-.drum-pad {
-  height: 5em;
-  width: 25%;
-  background-color: #DB0A5B;
-  display: inline-block;
-  margin: 1em;
-  text-align: center;
-  cursor: pointer;
-  box-shadow: .5px .5px 3px 1px snow; }
-  .drum-pad span {
+  .drum-pad {
+    height: 5em;
+    width: 25%;
+    background-color: #DB0A5B;
+    display: inline-block;
+    margin: 1em;
     text-align: center;
-    line-height: 5em; }
-
-.slider {
-  width: 50%;
-  margin: auto; }
-
-.label {
-  width: 50%;
-  height: 3em;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: snow;
-  color: #DB0A5B;
-  text-align: center;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  text-transform: uppercase; }
-  .label span {
+    cursor: pointer;
+    box-shadow: .5px .5px 3px 1px snow; }
+    .drum-pad span {
+      text-align: center;
+      line-height: 5em; }
+  .slider {
+    width: 50%;
+    margin: auto; }
+  .label {
+    width: 50%;
+    height: 3em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: snow;
+    color: #DB0A5B;
     text-align: center;
-    line-height: 3em; }
+    margin-top: 3em;
+    margin-bottom: 3em;
+    text-transform: uppercase; }
+    .label span {
+      text-align: center;
+      line-height: 3em; } }
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  #drum-machine {
+    width: 80%; } }
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  #drum-machine {
+    width: 60%; } }
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px) {
+  #drum-machine {
+    width: 50%; } }
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  #drum-machine {
+    width: 40%; } }

@@ -25,24 +25,17 @@ class App extends Component {
     const sound = document.getElementById(e);
     sound.volume = 1;
     sound.play();
+
   }
 
-  onKeyPress = (event, name) => {
-    this.setState({ buttonClicked: event });
-    this.setState({ name: name });
-
-    document.getElementById(event);
-
-    const sound = document.getElementById(event);
-    sound.play();
-  }
 
   render() {
     return (
       <DrumDisplay
         buttonClicked={this.state.buttonClicked}
-        name={this.state.name} handleClick={this.handleClick}
-        onKeyPress={this.onKeyPress}
+        name={this.state.name}
+        handleClick={this.handleClick}
+        onKeyPress={this.handleClick}
       />
     );
   }
