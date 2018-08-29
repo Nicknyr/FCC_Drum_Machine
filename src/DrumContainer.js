@@ -7,12 +7,14 @@ import 'rc-tooltip/assets/bootstrap.css';
 import Tooltip from 'rc-tooltip';
 import DrumPad from './Drumpad';
 
+
+
 const DrumDisplay = (props) => {
   return (
-    <div id="drum-machine">
+    <div id="drum-machine" tabIndex="0">
       <h1>React Drum Machine</h1>
 
-      <div className="drum-pad-container">
+      <div className="drum-pad-container" tabIndex="0">
         <DrumPad
           id='Q'
           soundName='Heater 1'
@@ -117,6 +119,7 @@ const DrumDisplay = (props) => {
           <span>{props.name}</span>
         </div>
       </div>
+
     </div>
   );
 }
