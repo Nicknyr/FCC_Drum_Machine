@@ -8,10 +8,10 @@ const PowerButton = (props) => {
       <label>
         <Toggle
           defaultChecked={props.power}
-          powerchange={this.handlePowerChange}
+          onChange={props.powerChange}
           icons={false}
         />
-        <p>On/Off</p>
+      <p>Off/On</p>
       </label>
     </div>
   );

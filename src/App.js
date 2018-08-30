@@ -36,7 +36,6 @@ class App extends Component {
 
   handlePowerChange = () => {
     this.setState({ power: !this.state.power });
-    console.log(this.state.power);
   }
 
   render() {
@@ -48,10 +47,8 @@ class App extends Component {
           handleClick={this.handleClick}
           onKeyPress={this.handleClick}
           tabIndex="0"
-        />
-        <Toggle
-          defaultChecked={this.state.power}
-          onChange={this.handlePowerChange}
+          power={this.state.power}
+          powerChange={this.handlePowerChange}
           icons={false}
         />
       </div>

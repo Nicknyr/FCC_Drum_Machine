@@ -6,7 +6,8 @@ import 'rc-slider/assets/index.css';
 import 'rc-tooltip/assets/bootstrap.css';
 import Tooltip from 'rc-tooltip';
 import DrumPad from './Drumpad';
-
+import PowerButton from './PowerButton.js';
+import Toggle from 'react-toggle';
 
 
 const DrumDisplay = (props) => {
@@ -108,6 +109,7 @@ const DrumDisplay = (props) => {
 
     </div>
 
+    <PowerButton {...props}/>
 
       <div id="display">
         <h3>Volume</h3>
